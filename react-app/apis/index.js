@@ -9,7 +9,7 @@ stable current 0.27.2
 */
 import axios from 'axios';
 import {setStorage, getStorage} from '#utils/rn.async.storage';
-import dayjs from '#utils/tz.dayjs';
+import day2js from '#utils/tz.dayjs';
 //----------------------------------------------------------------------------------------------------
 export const TOKEN_SAVE_NAME = 'app_token_data';
 
@@ -43,7 +43,7 @@ export const setToken = (cookies, setCookie) => {
 
   const {access_token, refresh_token, expired_at} = cookies;
   if (access_token) {
-    // const now = dayjs().unix() - 1;
+    // const now = day2js().unix() - 1;
     const store_data = {
       access_token,
       refresh_token,
@@ -77,7 +77,7 @@ restApi.interceptors.request.use(async request => {
     let access_token = String(token.access_token).trim();
     // 서버에서 오는 expired_at  = unix time ==> 실제 날짜 구하려면 1000을 곱해야함
     const expired_at = token.expired_at;
-    const timeGap = expired_at - dayjs().utc().unix();
+    const timeGap = expired_at - day2js().utc().unix();
     // access_token , refresh_token갱신 로직
     // 30초 이내 -> access_token갱신
     if (timeGap < 30) {

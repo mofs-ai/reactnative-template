@@ -53,7 +53,7 @@ npm install axios
 https://github.com/axios/axios/issues/4998
 --> current 0.27.2
 
-* dayjs ==> customize to use
+* dayjs ==> customize to use ==> day2js
 https://day.js.org/
 npm install dayjs
 
@@ -64,6 +64,21 @@ https://react-native-async-storage.github.io/async-storage/docs/install
 
 npm install @react-native-async-storage/async-storage
 npx pod-install
+
+
+4. redux & thunk
+A Predictable State Container for JS Apps
+https://redux.js.org/
+
+npm install redux react-redux redux-thunk
+
+* examples - redux-toolkit
+The official, opinionated, batteries-included toolset for efficient Redux development
+https://redux-toolkit.js.org/
+https://codesandbox.io/s/github/reduxjs/redux-toolkit/tree/master/examples/query/react/kitchen-sink?from-embed
+npm install @reduxjs/toolkit react-redux
+
+
 ```
 
 ### reset & pod

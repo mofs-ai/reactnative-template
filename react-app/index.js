@@ -8,29 +8,27 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
   Platform,
   StatusBar,
   StyleSheet,
   UIManager,
   LogBox,
   useColorScheme,
-  View,
-  Text,
 } from 'react-native';
-// DevTools
-
 // Prerequisites
 import theme from '#commons/theme';
 // import App
 import AppContainer from '#containers';
 
-// Context
-
 // Redux
+import {Provider} from 'react-redux';
+
+//Redux
+import store from '#store';
 
 // i18n
 
+// DevTool
 /*
  // CodePush
  import codePush from 'react-native-code-push';
@@ -44,21 +42,18 @@ if (Platform.OS === 'android') {
 }
 const App = props => {
   const isDarkMode = useColorScheme() === 'dark';
-
-  // const store = createStore(reducer, applyMiddleware(thunk));
-
   React.useEffect(() => {
     LogBox.ignoreAllLogs();
   }, []);
 
   return (
-    <>
+    <Provider store={store} styles={styles(isDarkMode)}>
       <StatusBar
         barStyle="dark-content"
         backgroundColor={theme.colors.defaultBackground}
       />
       <AppContainer />
-    </>
+    </Provider>
   );
 };
 
