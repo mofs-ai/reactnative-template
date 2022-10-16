@@ -11,7 +11,6 @@ import {
 // Business Logic
 import fetchLogic from './logic/fetch.data';
 
-
 const Item = ({title}) => (
   <View style={styles.item}>
     <Text style={styles.title}>{title}</Text>

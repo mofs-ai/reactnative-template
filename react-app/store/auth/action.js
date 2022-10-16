@@ -9,16 +9,6 @@ import {getAuthInfo} from 'reducer/auth/action';
   case 1 :  init 
   React.useEffect(() => {
     dispatch(getCountryCode());
-    dispatch(getRegionCode());
-    dispatch(getSexCode());
-    dispatch(getAdSCode());
-    dispatch(getCmCode());
-    dispatch(getCouponCode());
-    dispatch(getMemberCode());
-    dispatch(getMainSurgeryCode());
-    dispatch(getSubSurgeryCode_1());
-    dispatch(getSubSurgeryCode_2());
-    dispatch(getSubSurgeryCode_3());
     dispatch(treatmentDetailTag());
   }, []);
 

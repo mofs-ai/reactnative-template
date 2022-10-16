@@ -95,6 +95,16 @@ enzyme
 https://github.com/enzymejs/enzyme
 
 
+*  [@RNC/AsyncStorage]: NativeModule: AsyncStorage is null.
+https://github.com/react-native-async-storage/async-storage/issues/768
+npm install --save-dev 'est-fetch-mock
+
+import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/async-storage-mock';
+require('jest-fetch-mock').enableMocks();
+jest.mock('@react-native-async-storage/async-storage', () => mockAsyncStorage);
+
+
+
 ```
 
 ### reset & pod
