@@ -78,6 +78,22 @@ https://redux-toolkit.js.org/
 https://codesandbox.io/s/github/reduxjs/redux-toolkit/tree/master/examples/query/react/kitchen-sink?from-embed
 npm install @reduxjs/toolkit react-redux
 
+5. ui
+jest
+https://jestjs.io/
+
+[React Testing Library]
+React Testing Library
+https://testing-library.com/docs/react-testing-library/intro/
+npm install --save-dev @testing-library/react
+
+React Native Testing Library (RNTL)
+https://github.com/callstack/react-native-testing-library
+npm install --save-dev @testing-library/react-native
+
+enzyme
+https://github.com/enzymejs/enzyme
+
 
 ```
 
@@ -86,6 +102,8 @@ npm install @reduxjs/toolkit react-redux
 ```shell
 npm start -- --reset-cache
 pod install --repo-update
+
+npm run ios --reset-cache
 
 * react native upgrade
 react-native upgrade
