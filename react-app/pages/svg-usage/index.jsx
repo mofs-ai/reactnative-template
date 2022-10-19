@@ -9,43 +9,22 @@ import {
 } from 'react-native';
 import Svg, {SvgXml, SvgUri, Image} from 'react-native-svg';
 
-// Business Logic
-import fetchLogic from './logic/fetch.data';
-
-const defaultImg = '';
-
 const defaultUrl =
   'https://mofs.ai/static/media/logo.8c94e791ff8e88435c57fb7221b46d08.svg';
 
-import Logo from './svg.log';
-
-const Item = ({title}) => (
-  <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
-  </View>
-);
+import Logo from './svg.logo';
+import defaultImg from './img.base64';
 
 const UiLogincScreen = () => {
-  const [state, setState] = useState({data: []});
-  const renderItem = ({item}) => <Item title={item.title} />;
-
-  useEffect(() => {
-    fetchLogic.getData('https://reqres.in/api/users/2').then(res => {
-      setState(prev => {
-        return {...prev, data: [...res]};
-      });
-    });
-  }, []);
-
   return (
     <SafeAreaView style={styles.container}>
-      {/* // 1 component  */}
+      <Text>1. Component</Text>
       <SvgXml xml={Logo} width="50%" height="50%" fill={'black'} />
-      {/* // base64  */}
+      <Text>2. Base64</Text>
       <Svg height="30" width="30" viewBox="0 0 20 20">
         <Image x="5%" y="5%" width="90%" height="90%" href={defaultImg} />
       </Svg>
-      {/* // uri   */}
+      <Text>3. Uri</Text>
       <SvgUri
         width="100"
         height="100"

@@ -7,6 +7,7 @@ import MainBottomTabNavigator from './MainBottomTabNavigator';
 //--------------------------------------------------------------------------------------------------
 // pages
 import HomeScreen from '#pages/main/home';
+import SvgUsageScreen from '#pages/svg-usage';
 //--------------------------------------------------------------------------------------------------
 // const EntryStack = createNativeStackNavigator();
 const EntryStack = createDrawerNavigator();
@@ -34,6 +35,13 @@ const EntryStackNavigator = () => {
       <EntryStack.Screen
         name="Setting"
         component={HomeScreen}
+        options={{
+          MainerSMain: false,
+        }}
+      />
+      <EntryStack.Screen
+        name="SVG Usage"
+        component={SvgUsageScreen}
         options={{
           MainerSMain: false,
         }}

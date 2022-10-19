@@ -17,7 +17,7 @@ const Item = ({title}) => (
   </View>
 );
 
-const UiLogincScreen = () => {
+const SvgUsageScreen = () => {
   const [state, setState] = useState({data: []});
   const renderItem = ({item}) => <Item title={item.title} />;
 
@@ -56,4 +56,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default UiLogincScreen;
+export default SvgUsageScreen;
