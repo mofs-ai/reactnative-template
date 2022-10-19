@@ -7,9 +7,17 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import Svg, {SvgXml, SvgUri, Image} from 'react-native-svg';
 
 // Business Logic
 import fetchLogic from './logic/fetch.data';
+
+const defaultImg = '';
+
+const defaultUrl =
+  'https://mofs.ai/static/media/logo.8c94e791ff8e88435c57fb7221b46d08.svg';
+
+import Logo from './svg.log';
 
 const Item = ({title}) => (
   <View style={styles.item}>
@@ -31,10 +39,19 @@ const UiLogincScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <FlatList
-        data={state?.data}
-        renderItem={renderItem}
-        keyExtractor={item => item.id}
+      {/* // 1 component  */}
+      <SvgXml xml={Logo} width="50%" height="50%" fill={'black'} />
+      {/* // base64  */}
+      <Svg height="30" width="30" viewBox="0 0 20 20">
+        <Image x="5%" y="5%" width="90%" height="90%" href={defaultImg} />
+      </Svg>
+      {/* // uri   */}
+      <SvgUri
+        width="100"
+        height="100"
+        uri={defaultUrl}
+        // onError={onError}
+        // onLoad={onLoad}
       />
     </SafeAreaView>
   );

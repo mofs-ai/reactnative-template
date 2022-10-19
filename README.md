@@ -78,7 +78,16 @@ https://redux-toolkit.js.org/
 https://codesandbox.io/s/github/reduxjs/redux-toolkit/tree/master/examples/query/react/kitchen-sink?from-embed
 npm install @reduxjs/toolkit react-redux
 
-5. ui
+5. svg usage
+https://github.com/software-mansion/react-native-svg
+
+npm install react-native-svg
+cd ios && pod install && cd ..
+
+5-1.
+
+
+6. tdd exmample
 jest
 https://jestjs.io/
 

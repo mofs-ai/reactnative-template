@@ -3,7 +3,7 @@ import {httpClient} from '#apis';
 const fetchLogic = {
   getData: async url => {
     return await httpClient.get(url).then(res => {
-      console.log('[eeq]\n', res);
+      console.log('[req]\n', res);
       return [
         {
           id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',

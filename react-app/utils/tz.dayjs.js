@@ -9,7 +9,7 @@ dayjs.extend(timezone);
 
 // ===============================================================================================================
 // Set Default Timezone
-dayjs.tz.setDefault('Asia/Seoul');
+// dayjs.tz.setDefault('Asia/Seoul');
 // reset timezone
 dayjs.tz.setDefault();
 // ===============================================================================================================
