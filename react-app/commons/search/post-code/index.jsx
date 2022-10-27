@@ -1,8 +1,5 @@
 import * as React from 'react';
-
 import WebView from 'react-native-webview';
-// import {PostcodeProps} from './types';
-import {Linking, View} from 'react-native';
 
 const html = `
 <!DOCTYPE html>
@@ -100,11 +97,7 @@ const RnPostCode = props => {
       originWhitelist={['*']}
       //
       source={{
-        //http://10.0.2.2:3210/public/html/daum-postcode-v.0.0.2.html
         //iframe을 이용하여 레이어 띄우기
-        // uri: apiConfig.url + '/public/html/daum-postcode-v.0.0.1.html',
-        // iframe을 이용하여 페이지에 끼워 넣기 <-- 추천
-        // uri: '/public/html/daum-postcode-v.0.0.2.html',
         html,
         baseUrl: 'https://postcode.map.daum.net',
       }}
@@ -128,7 +121,7 @@ RnPostCode.defaultProps = {
 export default RnPostCode;
 
 /*
-  
+[주소 파싱 방법 참고]  
 // 각 주소의 노출 규칙에 따라 주소를 조합한다.
 // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
 var addr = ''; // 주소 변수
