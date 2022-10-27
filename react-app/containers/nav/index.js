@@ -8,6 +8,7 @@ import MainBottomTabNavigator from './MainBottomTabNavigator';
 // pages
 import HomeScreen from '#pages/main/home';
 import SvgUsageScreen from '#pages/svg-usage';
+import PostCodeScreen from '#pages/post-code';
 //--------------------------------------------------------------------------------------------------
 // const EntryStack = createNativeStackNavigator();
 const EntryStack = createDrawerNavigator();
@@ -42,6 +43,14 @@ const EntryStackNavigator = () => {
       <EntryStack.Screen
         name="SVG Usage"
         component={SvgUsageScreen}
+        options={{
+          MainerSMain: false,
+        }}
+      />
+
+      <EntryStack.Screen
+        name="Post Code"
+        component={PostCodeScreen}
         options={{
           MainerSMain: false,
         }}
